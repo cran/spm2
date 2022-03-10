@@ -1,5 +1,5 @@
-2ff6b74c97daba1db83b0ccd1f19eb07 *DESCRIPTION
-3ddff7b1968838840ecf742ef4fd6914 *NAMESPACE
+f001e1fda715db9a34ff6528f88531c5 *DESCRIPTION
+959b8087b8c8c8d3b095f9c1a6ea4dc3 *NAMESPACE
 7536b9d2663ee1e957e01a67c3a0c640 *R/ccr.R
 87cb22d55fb63e5e85705621d0d15e86 *R/datasplit.R
 05840e9aab0fb1ab208d03cab728034f *R/decimaldigit.R
@@ -34,6 +34,7 @@ b5c07de41542a06a422cad01811c5a1a *R/svmcv.R
 c1003ae93b7919ff4332ea24562c2661 *R/svmkrigeidwpred.R
 b43e6041e3905e62c83ebea6f7fb5a01 *R/svmkrigepred.R
 f117d8d3fc4c27fe433572e22c5f5ed4 *R/svmpred.R
+76b2df27bf02dc0516da3a0359aa1bcf *R/tpscv.R
 d8a06fd28b8dc851c8f7e287c705f18f *data/bees.rda
 cb3d01ce4497d860f98932b240c70ac4 *data/sponge2.rda
 f676c136f6324fe46a8cf3f31e5bc9d2 *data/spongelonglat.rda
@@ -75,3 +76,4 @@ a716c9ec0cb4ceacabe32f2b5cfc2915 *man/svmidwpred.Rd
 40f7045689e87c5b8cd2b3ec573e2074 *man/svmkrigeidwpred.Rd
 c4bb65cc96b04dc7c2af2eb6e26ff2fd *man/svmkrigepred.Rd
 89acd9ce888ece450e9c6820969cba1d *man/svmpred.Rd
+512da9d43b6dd4bee420229597470bdd *man/tpscv.Rd
