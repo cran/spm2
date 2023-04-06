@@ -88,7 +88,7 @@
 #' @param predacc can be either "VEcv" for vecv or "ALL" for all measures
 #' in function pred.acc.
 #' @param n.cores The number of CPU cores to use. See gbm for details. By
-#' default, 8 is used.
+#' default, 6 is used.
 #' @param ... other arguments passed on to 'randomForest', 'krige' and 'gstat'.
 #'
 #' @return A list with the following components:
@@ -97,7 +97,10 @@
 #' @note This function is largely based on 'gbmcv' in 'spm', and 'krigecv'
 #' in 'spm2'.
 #'
-#' @references Li, J., Potter, A., Huang, Z., and Heap, A. (2012). Predicting Seabed
+#' @references Li, J. (2022). Spatial Predictive Modeling with R. Boca Raton,
+#' Chapman and Hall/CRC.
+#'
+#' Li, J., Potter, A., Huang, Z., and Heap, A. (2012). Predicting Seabed
 #' Sand Content across the Australian Margin Using Machine Learning and Geostatistical
 #'  Methods, Geoscience Australia, Record 2012/48, 115pp.
 #'
@@ -126,7 +129,7 @@
 #' trainx = sponge[, -3], trainy = sponge[, 3], family = "poisson", interaction.depth = 3,
 #' transformation = "none", formula = res1 ~ 1, vgm.args = "Sph",
 #' nmaxkrige = 12, idp = 2, nmaxidw = 12, hybrid.parameter = 3, validation = "CV",
-#' predacc = "ALL", n.cores = 8)
+#' predacc = "ALL", n.cores = 2)
 #' gbmgbmkrigegbmidwcv1
 #'
 #' # gbmokgbmidw for count data
@@ -142,7 +145,7 @@
 #'   trainx = trainx, trainy = y, family = "poisson", interaction.depth = 3,
 #'   transformation = "none", formula = res1 ~ 1, vgm.args = ("Sph"),
 #'   nmaxkrige = 12, idp = 2, nmaxidw = 12, hybrid.parameter = 2, validation = "CV",
-#'   predacc = "VEcv", n.cores = 8)
+#'   predacc = "VEcv", n.cores = 2)
 #'   VEcv [i] <- gbmkrigegbmidwcv1
 #'  }
 #'  plot(VEcv ~ c(1:n), xlab = "Iteration for gbmokgbmidw", ylab = "VEcv (%)")
@@ -179,7 +182,7 @@ gbmkrigeidwcv <- function (longlat, trainx, trainy,
                            validation = "CV",
                            cv.fold = 10,
                            predacc = "VEcv",
-                           n.cores = 8, ...) {
+                           n.cores = 6, ...) {
 
   if (validation == "LOO") {idx <- 1:length(trainy)}
   if (validation == "CV")  {idx <- datasplit(trainy, k.fold = cv.fold)}

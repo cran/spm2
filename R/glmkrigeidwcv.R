@@ -63,7 +63,10 @@
 #' @note This function is largely based on 'rfcv' in 'randomForest', 'krigecv'
 #' in 'spm2'and 'glm' in 'stats'.
 #'
-#' @references Li, J., Alvarez, B., Siwabessy, J., Tran, M., Huang, Z.,
+#' @references Li, J. (2022). Spatial Predictive Modeling with R. Boca Raton,
+#' Chapman and Hall/CRC.
+#'
+#' Li, J., Alvarez, B., Siwabessy, J., Tran, M., Huang, Z.,
 #' Przeslawski, R., Radke, L., Howard, F. and Nichol, S. (2017). "Application
 #' of random forest, generalised linear model and their hybrid methods with
 #' geostatistical techniques to count data: Predicting sponge species richness."
@@ -136,7 +139,6 @@
 #'  abline(h = mean(VEcv), col = 'blue', lwd = 2)
 #'
 #' # glmokglmidw for percentage data
-#' library(MASS)
 #' longlat <- petrel[, c(1, 2)]
 #' model <- gravel / 100 ~  lat +  bathy + I(long^3) + I(lat^2) + I(lat^3)
 #' set.seed(1234)

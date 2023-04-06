@@ -109,7 +109,7 @@ glskrigepred1 <- glskrigepred(model = model, longlat = longlat, trainxy = gravel
 predx = petrel.grid, y = y, longlatpredx = petrel.grid[, c(1:2)],
 transformation = "none", formula.krige = res1 ~ 1,
 vgm.args = "Sph", nmaxkrige = 12, corr.args = corSpher(c(range1, nugget1),
-form = ~ lat + long, nugget = T))
+form = ~ lat + long, nugget = TRUE))
 
 names(glskrigepred1)
 

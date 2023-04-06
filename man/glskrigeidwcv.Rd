@@ -140,7 +140,7 @@ I(lat^3) + I(bathy^2) + I(bathy^3) + I(dist^2) + I(dist^3) + I(relief^2) + I(rel
 glskrigeidwcv1 <- glskrigeidwcv(model = model, longlat = longlat, trainxy = gravel,
 y = log(gravel[, 7] +1), transformation = "none", formula.krige = res1 ~ 1,
 vgm.args = "Sph", nmaxkrige = 12, idp = 2, nmaxidw = 12, validation = "CV",
- corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = T),
+ corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = TRUE),
  predacc = "ALL")
 glskrigeidwcv1
 
@@ -152,7 +152,7 @@ for (i in 1:n) {
 glskrigeidwcv1 <- glskrigeidwcv(model = model, longlat = longlat, trainxy = gravel,
 y = log(gravel[, 7] +1), transformation = "none", formula.krige = res1 ~ 1,
 vgm.args = "Sph", nmaxkrige = 12, idp = 2, nmaxidw = 12, validation = "CV",
-corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = T),
+corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = TRUE),
  predacc = "VEcv")
 VEcv [i] <- glskrigeidwcv1
 }
@@ -170,7 +170,7 @@ glskrigeidwcv1 <- glskrigeidwcv(model = model, longlat = longlat, trainxy = grav
 y = log(gravel[, 7] +1), transformation = "none", formula.krige = res1 ~ 1,
 vgm.args = "Sph", nmaxkrige = 12, idp = 2, nmaxidw = 12, hybrid.parameter = 3,
 validation = "CV", corr.args = corSpher(c(range1, nugget1), form = ~ lat + long,
- nugget = T), predacc = "VEcv")
+ nugget = TRUE), predacc = "VEcv")
 VEcv [i] <- glskrigeidwcv1
 }
 plot(VEcv ~ c(1:n), xlab = "Iteration for GLSOKGLSIDW", ylab = "VEcv (\%)")
@@ -180,6 +180,9 @@ abline(h = mean(VEcv), col = 'blue', lwd = 2)
 
 }
 \references{
+Li, J. (2022). Spatial Predictive Modeling with R. Boca Raton,
+Chapman and Hall/CRC.
+
 Pinheiro, J. C. and D. M. Bates (2000). Mixed-Effects Models
 in S and S-PLUS. New York, Springer.
 

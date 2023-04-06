@@ -81,7 +81,7 @@ y <- log(gravel[, 7] +1)
 glsidwpred1 <- glsidwpred(model = model, longlat = longlat, trainxy = gravel,
 y = y, longlatpredx = petrel.grid[, c(1:2)], predx = petrel.grid,
  idp = 2, nmaxidw = 12, corr.args = corSpher(c(range1, nugget1),
- form = ~ lat + long, nugget = T))
+ form = ~ lat + long, nugget = TRUE))
 
 names(glsidwpred1)
 

@@ -73,7 +73,7 @@ I(lat^3) + I(bathy^2) + I(bathy^3) + I(dist^2) + I(dist^3) + I(relief^2) + I(rel
 
 
 glscv1 <- glscv(model = model, gravel, log(gravel[, 7] +1), validation = "CV",
- corr.args = corSpher(c(range1, nugget1), form = ~ long + lat, nugget = T),
+ corr.args = corSpher(c(range1, nugget1), form = ~ long + lat, nugget = TRUE),
  predacc = "ALL")
 glscv1
 
@@ -84,7 +84,7 @@ VEcv <- NULL
 for (i in 1:n) {
 glscv1 <- glscv(model = model, gravel, log(gravel[, 7] +1), validation = "CV",
           corr.args = corSpher(c(range1, nugget1), form = ~ long + lat,
-          nugget = T), predacc = "VEcv")
+          nugget = TRUE), predacc = "VEcv")
 VEcv [i] <- glscv1
 }
 plot(VEcv ~ c(1:n), xlab = "Iteration for GLS", ylab = "VEcv (\%)")

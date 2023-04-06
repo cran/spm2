@@ -72,7 +72,10 @@
 #' @note This function is largely based on 'rfcv' in 'randomForest', 'krigecv'
 #' in 'spm2'and 'svm' in 'e1071'.
 #'
-#' @references Li, J., Potter, A., Huang, Z., and Heap, A. (2012). Predicting Seabed
+#' @references Li, J. (2022). Spatial Predictive Modeling with R. Boca Raton,
+#' Chapman and Hall/CRC.
+#'
+#' Li, J., Potter, A., Huang, Z., and Heap, A. (2012). Predicting Seabed
 #' Sand Content across the Australian Margin Using Machine Learning and Geostatistical
 #'  Methods, Geoscience Australia, Record 2012/48, 115pp.
 #'

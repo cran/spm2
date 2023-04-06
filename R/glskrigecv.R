@@ -75,7 +75,7 @@
 #' glskrigecv1 <- glskrigecv(model = model, longlat = longlat, trainxy = gravel,
 #' y = log(gravel[, 7] +1), transformation = "none", formula.krige = res1 ~ 1,
 #' vgm.args = "Sph", nmaxkrige = 12, validation = "CV",
-#'  corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = T),
+#'  corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = TRUE),
 #'  predacc = "ALL")
 #' glskrigecv1
 #'
@@ -87,7 +87,7 @@
 #' glskrigecv1 <- glskrigecv(model = model, longlat = longlat, trainxy = gravel,
 #' y = log(gravel[, 7] +1), transformation = "none", formula.krige = res1 ~ 1,
 #' vgm.args = "Sph", nmaxok = 12, validation = "CV",
-#' corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = T),
+#' corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = TRUE),
 #'  predacc = "VEcv")
 #' VEcv [i] <- glskrigecv1
 #' }

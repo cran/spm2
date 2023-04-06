@@ -177,7 +177,7 @@ gbmkrigeidwpred1 <- gbmkrigeidwpred(longlat = longlat, trainx = sponge[, -3],
 predx = sponge.grid, trainy = sponge[, 3], longlatpredx = sponge.grid[, c(1:2)],
 family = "poisson", interaction.depth = 3, transformation = "none", formula = res1 ~ 1,
 vgm.args = "Sph", nmaxkrige = 12, idp = 2, nmaxidw = 12, hybrid.parameter = 3,
-n.cores = 8)
+n.cores = 2)
 
 names(gbmkrigeidwpred1)
 

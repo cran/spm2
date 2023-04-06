@@ -102,7 +102,6 @@
 #'  abline(h = mean(VEcv), col = 'blue', lwd = 2)
 #'
 #' # glmok for percentage data
-#' library(MASS)
 #' longlat <- petrel[, c(1, 2)]
 #' model <- gravel / 100 ~  lat +  bathy + I(long^3) + I(lat^2) + I(lat^3)
 #' set.seed(1234)

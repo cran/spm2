@@ -195,6 +195,9 @@ for (i in 1:n) {
 
 }
 \references{
+Li, J. (2022). Spatial Predictive Modeling with R. Boca Raton,
+Chapman and Hall/CRC.
+
 Li, J., Potter, A., Huang, Z., and Heap, A. (2012). Predicting Seabed
 Sand Content across the Australian Margin Using Machine Learning and Geostatistical
  Methods, Geoscience Australia, Record 2012/48, 115pp.

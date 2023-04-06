@@ -37,12 +37,13 @@
 #' gravel <- petrel[, c(1, 2, 6:9, 5)]
 #' range1 <- 0.8
 #' nugget1 <- 0.5
-#' model <- log(gravel + 1) ~  long + lat +  bathy + dist + I(long^2) + I(lat^2)
-#' + I(lat^3) + I(bathy^2) + I(bathy^3) + I(dist^2) + I(dist^3) + I(relief^2) + I(relief^3)
+#'
+#' model <- log(gravel + 1) ~  long + lat +  bathy + dist + I(long^2) + I(lat^2) +
+#' I(lat^3) + I(bathy^2) + I(bathy^3) + I(dist^2) + I(dist^3) + I(relief^2) + I(relief^3)
 #'
 #' glspred1 <- glspred(model = model, trainxy = gravel,
 #'  longlatpredx = petrel.grid[, c(1:2)], predx = petrel.grid,
-#'  corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = T))
+#'  corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = TRUE))
 #'
 #' names(glspred1)
 #'

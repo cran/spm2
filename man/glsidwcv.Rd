@@ -88,7 +88,7 @@ I(lat^3) + I(bathy^2) + I(bathy^3) + I(dist^2) + I(dist^3) + I(relief^2) + I(rel
 
 glsidwcv1 <- glsidwcv(model = model, longlat = longlat, trainxy = gravel,
 y = log(gravel[, 7] +1), idp = 2, nmaxidw = 12, validation = "CV",
- corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = T),
+ corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = TRUE),
  predacc = "ALL")
 glsidwcv1
 
@@ -99,7 +99,7 @@ VEcv <- NULL
 for (i in 1:n) {
 glsidwcv1 <- glsidwcv(model = model, longlat = longlat, trainxy = gravel,
 y = log(gravel[, 7] +1), idp = 2, nmaxidw = 12, validation = "CV",
-corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = T),
+corr.args = corSpher(c(range1, nugget1), form = ~ lat + long, nugget = TRUE),
 predacc = "VEcv")
 VEcv [i] <- glsidwcv1
 }
